@@ -5,9 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Card Game</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
+    <div id="container__wrapper">
+      <!-- init game -->
+      <div class="game-container container__player-init">
+        <div id="set-max-players">
+          <p>Set max number of players</p>
+          <div id="submit-input-wrapper">
+            <div>
+              <input
+                id="submit-max-players_input"
+                type="number"
+                placeholder="minimum 2 players"
+                min="2"
+              />
+            </div>
+            <button
+              class="btn btn-primary primary-btn"
+              id="submit-max-players_btn"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+        <div id="set-players" style="visibility: hidden">
+          <p>Set players name</p>
+          <div id="set-players__players-list"></div>
+        </div>
+      </div>
+      <!-- scoreboard -->
+      <div
+        class="game-container container__scoreboard"
+        style="visibility: hidden"
+      >
+        <p>Scoreboard</p>
+        <div id="scoreboard">
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Total Score</th>
+              </tr>
+            </thead>
+            <tbody id="scoreboard__tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <!-- show cards -->
+      <div
+        class="game-container container__game-init"
+        style="visibility: hidden"
+      ></div>
+
+      <!-- game end div -->
+      <div class="game-container container__gameend" style="visibility: hidden">
+        <p style="text-align: center; font-size: 18px; font-weight: 700">
+          - Game end -
+        </p>
+      </div>
+    </div>
+    <script src="constants.js"></script>
+    <script src="display.js"></script>
+    <script src="players.js"></script>
+    <script src="scoreboard.js"></script>
     <script src="cards.js"></script>
     <script src="main.js"></script>
+    <script src="render.js"></script>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
