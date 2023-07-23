@@ -73,7 +73,7 @@ const cardDisplayRenderer = () => {
   const showCardImage = (drawnCard) => {
     const cardImageWrapper = document.createElement('div')
     const cardImage = document.createElement('img')
-    cardImage.src = `images/card/${drawnCard.card.description}_of_${drawnCard.card.suit}.png`
+    cardImage.src = `./images/card/${drawnCard.card.description}_of_${drawnCard.card.suit}.png`
     cardImageWrapper.appendChild(cardImage)
 
     return cardImageWrapper
