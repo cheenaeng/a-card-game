@@ -34,6 +34,7 @@ const calculateScore = (playerDrawnCards, playerDecisions) => {
     }
   })
   sortCards(allCards)
+  console.log(allCards)
 
   tallyScore(allCards, scoreBoard)
   console.log('---------CARDS DRAWN--------')

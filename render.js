@@ -258,13 +258,13 @@ const renderGameStates = () => {
     }, {})
 
     dealCardBtn.addEventListener('click', () => {
+      updateScoreboard(drawnCards, playerDecisions)
       drawnCards = dealCards(allPlayers)
       if (drawnCards.length < allPlayers.length) {
         return showGameEnd()
       }
       const newCardsDisplayEl = showCards(drawnCards, playerDecisions)
       cardDisplay.appendChild(newCardsDisplayEl)
-      updateScoreboard(drawnCards, playerDecisions)
     })
 
     cardDisplay.appendChild(dealCardWrapper)
