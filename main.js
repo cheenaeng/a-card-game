@@ -34,17 +34,14 @@ const calculateScore = (playerDrawnCards, playerDecisions) => {
     }
   })
   sortCards(allCards)
-  console.log(allCards)
 
   tallyScore(allCards, scoreBoard)
-  console.log('---------CARDS DRAWN--------')
-  console.log(allCards)
+  // console.log('---------CARDS DRAWN--------')
+  // console.log(allCards)
 
-  //get user input here whether to skip or not
-
-  console.log('---------SCOREBOARD--------')
+  // console.log('---------SCOREBOARD--------')
   const sortedScores = sortScoreBoard(scoreBoard, allPlayers)
-  console.log(sortedScores)
+  // console.log(sortedScores)
 
   return sortedScores
 }
