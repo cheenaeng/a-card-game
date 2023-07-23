@@ -1,5 +1,7 @@
-### How to start the program?
+### Introduction 
+- Simple UI for a card game
 
+### How to start the program?
 - view index.html in browser
   alternatively, view on https://cheenaeng.github.io/a-card-game/
 
