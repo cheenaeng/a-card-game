@@ -94,7 +94,7 @@ const cardDisplayRenderer = () => {
       const cardImage = showCardImage(drawnCard)
       const descriptionEl = document.createElement('p')
       descriptionEl.innerHTML = `${drawnCard.card.description} of ${
-        CARD_SUITS_SYMBOL[drawnCard.card.suit]
+        CARD_SUITS_SYMBOL[drawnCard.card.suit.toLowerCase()]
       }`
       drawnCardEl.appendChild(cardImage)
       drawnCardEl.appendChild(descriptionEl)
