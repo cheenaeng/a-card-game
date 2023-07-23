@@ -73,7 +73,9 @@ const cardDisplayRenderer = () => {
   const showCardImage = (drawnCard) => {
     const cardImageWrapper = document.createElement('div')
     const cardImage = document.createElement('img')
-    cardImage.src = `./images/card/${drawnCard.card.description}_of_${drawnCard.card.suit}.png`
+    cardImage.src = `./images/card/${
+      drawnCard.card.description
+    }_of_${drawnCard.card.suit.toLowerCase()}.png`
     cardImageWrapper.appendChild(cardImage)
 
     return cardImageWrapper
@@ -94,7 +96,7 @@ const cardDisplayRenderer = () => {
       const cardImage = showCardImage(drawnCard)
       const descriptionEl = document.createElement('p')
       descriptionEl.innerHTML = `${drawnCard.card.description} of ${
-        CARD_SUITS_SYMBOL[drawnCard.card.suit.toLowerCase()]
+        CARD_SUITS_SYMBOL[drawnCard.card.suit]
       }`
       drawnCardEl.appendChild(cardImage)
       drawnCardEl.appendChild(descriptionEl)
